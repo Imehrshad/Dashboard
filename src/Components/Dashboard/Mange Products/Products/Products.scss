@@ -1,0 +1,56 @@
+@import "../../../variables.module";
+@import "../../../mixins";
+
+.productContainer {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.productContainer>div {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.product {
+    @include centerDev();
+    flex-direction: column;
+    margin: 5px 5px;
+    width: 250px;
+    background-color: $SecondarColor ;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product>img {
+    width: 180px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.product>p {
+    color: $whiteFont;
+    height: 100px;
+    line-height: 1.5rem;
+    font-size: 15px;
+}
+.loading{
+    @include centerDev();
+    height: 500px;
+}
+.productContainer>div>svg{
+    position: absolute;
+    top: 3%;
+    color: white;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.productContainer>div{
+    margin-top: 50px;
+}

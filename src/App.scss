@@ -1,0 +1,20 @@
+@import "./Components/variables.module";
+@import "./Components/mixins";
+@import 'react-toastify/dist/ReactToastify.css';
+
+.tabContainer {
+  @include centerDev()
+}
+
+.toast-message {
+  background: $Sucess;
+  width: 1000px;
+}
+
+.Toastify__toast--success  {
+  background-color: $Sucess;
+}
+.custom-toast-icon{
+  color: $FourthColor;
+  transform: scale(1.5);
+}

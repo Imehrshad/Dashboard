@@ -1,0 +1,91 @@
+@import "../variables.module";
+@import "../mixins";
+
+.dashboardContainer {
+    @include centerDev();
+    align-items: start !important;
+    width: 66%;
+    height: 100%;
+    gap: 10px;
+
+    .menu {
+        padding: 10px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        width: 20%;
+        height: 100%;
+        border-radius: 10px;
+        background-color: $PrimaryColor;
+        box-shadow: 0 0 10px #1f242475;
+
+        @media screen and (max-width: 450px) {
+            display: none;
+        }
+    }
+
+    .content {
+        @include centerDev();
+        width: 70%;
+        height: 100%;
+        background-color: $PrimaryColor;
+        box-shadow: 0 0 10px #1f242475;
+    }
+}
+
+@media (max-width: 400px) {
+    .menu {
+        display: none;
+    }
+}
+
+.mainCotainer {
+    @include centerDev();
+    width: 100%;
+    padding: 10px 0;
+}
+
+li {
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 50px;
+    margin: 10px 0;
+    padding: 0 0 0 10px;
+    background-color: $PrimaryColor;
+    list-style-type: none;
+    list-style: none;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+}
+
+li:hover {
+    background-color: $SecondarColor;
+    transition: all 500ms;
+}
+
+ul {
+    @include centerDev();
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.active {
+    background-color: $SecondarColor ;
+}
+
+.profile>svg {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 5px;
+
+}
+.profile{
+    cursor: default !important;
+}

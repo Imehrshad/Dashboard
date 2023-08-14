@@ -1,0 +1,29 @@
+@import "../../variables.module";
+@import "../../mixins";
+
+.mangeProducts {
+    @include centerDev();
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.mangeProducts>div {
+    @include centerDev();
+    flex-direction: column;
+    width: 50%;
+    font-size: 20px;
+    color: $whiteFont;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid $ThirdColor;
+}
+
+.mangeProducts>div:hover {
+    box-shadow: 0 0 30px $ThirdColor;
+}
+.mangeProducts>div>svg{
+    width: 100px  ;
+    height: 100px ;
+    
+}

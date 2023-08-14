@@ -1,0 +1,17 @@
+$PrimaryColor:#2C3333;
+$SecondarColor:#2E4F4F;
+$ThirdColor:#0E8388;
+$FourthColor:#CBE4DE;
+$whiteFont:#ffff;
+$inputColor:#414b4b;
+$Sucess:#5BB318;
+$Error:rgb(224, 18, 18);
+:export{
+    primary:$PrimaryColor;
+    secondary:$SecondarColor;
+    third:$ThirdColor;
+    fourth:$FourthColor;
+    inputColor:$inputColor;
+    whiteColor:$whiteFont;
+    Sucess:$Sucess;
+}
