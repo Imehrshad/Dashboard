@@ -1,0 +1,7 @@
+@import '../variables.module';
+.Error{
+    color: $Error;
+    align-self: flex-start;
+    font-size: 0.9rem;
+    line-height: 1.5em;
+}
