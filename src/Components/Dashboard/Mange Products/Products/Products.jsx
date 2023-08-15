@@ -34,7 +34,10 @@ export const Products = ({page}) => {
         return (
             <div className='productContainer'>
                 <div>
-                    <MdArrowBackIosNew onClick={pageHandler} />
+                    <div className='backButton' onClick={pageHandler}>
+                    <MdArrowBackIosNew  />
+                    <p>Back</p>
+                    </div>
                     {
                         products.map((item) => {
                             return <div className='product'>

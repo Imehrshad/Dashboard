@@ -6,7 +6,7 @@ import { Products } from './Products/Products';
 import { AddProduct } from './Add Product/AddProduct';
 
 
-export const MangeProducts = () => {
+export const MangeProducts = ({addproduct}) => {
   const [selection, setSelection] = useState(0)
   const backToHome = () => {
     setSelection(0)
@@ -31,7 +31,7 @@ export const MangeProducts = () => {
     )
   }
   if (selection === 2) {
-    <AddProduct />
+    return <AddProduct page={backToHome} addproduct={addproduct} />
   }
 
 }

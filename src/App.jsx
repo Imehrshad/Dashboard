@@ -21,6 +21,18 @@ function App() {
     className: 'toast-message',
     icon: <FaCheckCircle className="custom-toast-icon" />
   });
+  const addProduct = () => toast.success("Your register was successfull !", {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    className: 'toast-message',
+    icon: <FaCheckCircle className="custom-toast-icon" />
+  });
   const getUsername = (username) => {
     setLoggedIn(true)
     setUsername(username)
@@ -32,7 +44,7 @@ function App() {
   return (
     <div >
       <ToastContainer />
-      {isloggedin && <Dashboard userInfo={username} logout={logout} />}
+      {isloggedin && <Dashboard userInfo={username} logout={logout} addproduct={addProduct} />}
       <div className='tabContainer'>
         {!isloggedin && <Mytabs toast={notify} Username={getUsername} />}
 

@@ -64,7 +64,7 @@ export const Signup = ({ toastData }) => {
   if (serverError) {
     return (
       <div >
-        <Formik onSubmit={() => submitHandler()} validationSchema={userSchema} initialValues={values} innerRef={formref}>
+        <Formik onSubmit={submitHandler} validationSchema={userSchema} initialValues={values} innerRef={formref}>
           {
             ({ touched, errors }) => {
               return <Form className='signupContainer'>
