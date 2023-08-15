@@ -3,10 +3,11 @@ import "./MangeProducts.scss"
 import { AiFillFileAdd } from 'react-icons/ai';
 import { BsFillFolderFill } from 'react-icons/bs';
 import { Products } from './Products/Products';
-import { AddProduct } from './Add Product/AddProduct';
+import { AddNewProduct } from './Add Product/AddProduct';
 
 
-export const MangeProducts = ({addproduct}) => {
+
+export const MangeProducts = ({ addproduct }) => {
   const [selection, setSelection] = useState(0)
   const backToHome = () => {
     setSelection(0)
@@ -31,7 +32,7 @@ export const MangeProducts = ({addproduct}) => {
     )
   }
   if (selection === 2) {
-    return <AddProduct page={backToHome} addproduct={addproduct} />
+    return <AddNewProduct page={backToHome} addproduct={addproduct} />
   }
 
 }

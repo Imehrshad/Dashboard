@@ -6,17 +6,18 @@ import { MdArrowBackIosNew } from 'react-icons/md';
 import { object, string } from 'yup';
 import './AddProduct.scss';
 
-const initialValues = {
-  name: '',
-  price: '',
-};
 
-const productValidation = object({
-  name: string().required('This field is required'),
-  price: string().required('This field is required'),
-});
 
-const AddProduct = ({ addproduct, page }) => {
+export const AddNewProduct = ({ addproduct, page }) => {
+  const initialValues = {
+    name: '',
+    price: '',
+  };
+  
+  const productValidation = object({
+    name: string().required('This field is required'),
+    price: string().required('This field is required'),
+  });
   const [addError, setAddError] = useState(false);
   const productRef = useRef();
   const fileRef = useRef(null);
@@ -106,5 +107,3 @@ const AddProduct = ({ addproduct, page }) => {
     </div>
   );
 };
-
-export default AddProduct;
